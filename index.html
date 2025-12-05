@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakshita's Birthday Party</title>
+    <!-- Google Fonts: Radio Canada Big -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons (as a modern alternative to Feather) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Container for both views -->
+    <div class="container">
+
+        <!-- LOGIN VIEW -->
+        <div id="login-view" class="card fade-in">
+            <div class="profile-container">
+                <div class="profile-circle">
+                    <!-- Increased size and object-fit handled in CSS -->
+                    <img src="images/profile_pic.png" alt="Profile" class="profile-img">
+                </div>
+            </div>
+
+            <h1 class="title">You are invited to a birthday party<span class="emoji">🎉</span></h1>
+
+            <div class="input-section">
+                <h2 class="subtitle">Invitation code</h2>
+                <p class="instruction">Enter your invitation code to continue</p>
+
+                <div class="input-wrapper">
+                    <input type="text" id="invite-code" placeholder="Type here">
+                    <i data-lucide="mail" class="input-icon"></i>
+                </div>
+
+                <button id="proceed-btn" class="primary-btn">
+                    Proceed <i data-lucide="arrow-up-right" class="btn-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- INVITE DETAILS VIEW (Hidden initially) -->
+        <div id="invite-view" class="card hidden">
+            <!-- Floating Stickers -->
+            <img src="images/cinnamoroll.png" class="sticker cinnamoroll" alt="Cinnamoroll">
+            <img src="images/yoro_sticker.png" class="sticker yoro" alt="Cinnamoroll Sticker">
+
+            <div class="profile-container">
+                <div class="profile-circle">
+                    <img src="images/profile_pic.png" alt="Profile" class="profile-img">
+                </div>
+            </div>
+
+            <h1 class="title highlight">Dakshita's 11th Birthday Celebration 🥳 🍰</h1>
+
+            <p class="warm-text">
+                You are cordially invited to celebrate our daughter's birthday
+            </p>
+            <p class="sub-warm-text">
+                Please shower her with your love and blessings 💕
+            </p>
+
+            <div class="details-list">
+                <div class="detail-item">
+                    <span class="detail-label">At?</span>
+                    <a href="https://www.google.com/maps/place/Barbeque+Nation/@28.5801739,77.3126802,17z/data=!3m1!5s0x390ce45c120de967:0xfe9b308d5abe613d!4m6!3m5!1s0x390ce45bf7cb77cb:0x1a245ee58183cd13!8m2!3d28.5801739!4d77.3152551!16s%2Fg%2F1pp2tj_p0?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" class="detail-link">
+                        <span class="detail-value">Barbeque Nation</span>
+                        <i data-lucide="map-pin" class="detail-icon clickable-icon"></i>
+                    </a>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">When?</span>
+                    <span class="detail-value">11th of December 6pm</span>
+                    <i data-lucide="calendar" class="detail-icon"></i>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Contact?</span>
+                    <span class="detail-value">9891224865</span>
+                    <i data-lucide="phone" class="detail-icon"></i>
+                </div>
+            </div>
+
+            <button id="exit-btn" class="primary-btn exit-btn">
+                Exit <i data-lucide="log-out" class="btn-icon"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Error Toast moved to bottom -->
+    <div id="error-message" class="error-toast hidden">
+        <i data-lucide="alert-triangle" class="error-icon"></i>
+        <span id="error-text">No Invitation code is entered</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

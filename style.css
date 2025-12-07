@@ -383,8 +383,9 @@ input[type="text"]:focus {
 
     .profile-circle {
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
         height: auto;
         aspect-ratio: 1/1;
     }
+
 }
